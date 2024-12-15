@@ -1,38 +1,96 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  background-color: #f7f7f7;
+  transition: background-color 0.3s ease;
+}
+
+/* Grid layout for chart boxes */
+.chart-container {
+  width: 100%;  
+  max-width: 1000px;  
+  height: 400px;  
+}
+
+.chart-box {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 200px; 
+  height: 150px;  
+}
+
+.grid-container {
+  display: flex;  
+  justify-content: space-around;  
+  align-items: center;  
+  flex-wrap: wrap; 
+  gap: 20px;
+  padding: 20px;
+}
+
+.chart-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chart-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+/* Modal container */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Blurred background */
+.blurred-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);  /* Blur effect */
+  z-index: -1;  /* Push the background behind the modal */
+}
+
+/* Modal box */
+.modal {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 1001;  /* Make sure the modal is above everything else */
+}
+
+/* Close button */
+.close-btn {
+  background-color: #ff5e5e;
   color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.close-btn:hover {
+  background-color: #e34b4b;
 }

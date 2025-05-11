@@ -3,14 +3,14 @@ import { getDatabase } from "firebase/database";
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBs2oW14BkKaRa8tOIkJsWXEvNFl2D6j4w",
-  authDomain: "power-monotoring.firebaseapp.com",
-  databaseURL: "https://power-monotoring-default-rtdb.firebaseio.com",
-  projectId: "power-monotoring",
-  storageBucket: "power-monotoring.appspot.com",
-  messagingSenderId: "479109727274",
-  appId: "1:479109727274:web:c9120dabcf332652a7ef53",
-  measurementId: "G-6NCFNK3QW7"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 
 // Initialize Firebase
